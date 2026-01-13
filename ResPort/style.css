@@ -1,12 +1,15 @@
+/* Place in your CSS file at the top of the document */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif+Caption&display=swap');
 
 @media (min-width: 1025px) {
     .container{
     border: 2px solid red;
     display: grid;
-    gap:10px;
+    gap:30px;
     }
     .navbar{
-        border: 2px solid darkblue;
+        box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.3);
         display: flex;
         justify-content: space-around;
         height: 50px;
@@ -15,7 +18,6 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        border: 2px solid rebeccapurple;
     }
     .logo{
         width: 100%;
@@ -25,21 +27,142 @@
     .nav2{
         width: 60%;
         height: 100%;
-        border: 2px solid darkgoldenrod;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     .name{
-        background-color: black;
-        color:white;
-        padding: 6px;
+        background-color:white;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        padding: 5px;
         border-radius: 10px;
     }
+    .namehead{
+        display: flex;
+        padding: 5px;
+    }
+    .greeting{
+        margin-top: 30px;
+        font-size: 1.8em;
+    }
+    svg {
+        font-family: "Red Hat Text", sans-serif;
+        width: 100%;
+        height: 10%;
+    }
+    svg text {
+        animation: stroke 3s infinite alternate;
+        stroke-width: 0.05;
+        stroke: #030508;
+        font-size: 5em;
+    }
+
+    @keyframes stroke {
+        0% {
+            fill: rgba(11,21,31,0);
+            stroke: rgba(3,5,8,1);
+            stroke-dashoffset: 25%;
+            stroke-dasharray: 0 50%;
+            stroke-width: 2;
+        }
+        70% {
+            fill: rgba(11,21,31,0);
+            stroke: rgba(3,5,8,1);
+        }
+        80% {
+            fill: rgba(11,21,31,0);
+            stroke: rgba(3,5,8,1);
+            stroke-width: 3;
+        }
+        100% {
+            fill: rgba(11,21,31,1);
+            stroke: rgba(3,5,8,0);
+            stroke-dashoffset: -25%;
+            stroke-dasharray: 50% 0;
+            stroke-width: 0;
+        }
+    }
+    .wrapper {
+        width: 50%;
+        margin-top: 25px;
+        margin-bottom: -40px;
+    }
+    .show{
+        padding:20px;
+        font-size: 2.5rem;
+        font-family: 'PT Serif Caption', serif;
+    }
+    .custom-loader {
+    width: 30px;
+    height: 30px;
+    display: inline-grid;
+    color: #766DF4;
+
+    background: 
+        linear-gradient(currentColor 0 0) center/100% 1.5px,
+        linear-gradient(currentColor 0 0) center/1.5px 100%;
+    background-repeat: no-repeat;
+    animation: s8 2s infinite;
+    }
+
+    .custom-loader::before,
+    .custom-loader::after {
+    content: "";
+    grid-area: 1/1;
+    background: repeating-conic-gradient(#0000 0 35deg,currentColor 0 90deg);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 1.5px),#000 0);
+    border-radius: 50%;
+    }
+    .custom-loader::after {
+    margin:20%;
+    }
+
+    @keyframes s8 {
+    100% {transform: rotate(1turn)}
+    }
+
+    @keyframes s5 {
+    100% {transform: rotate(1turn)}
+    }
+    .text-rotator {
+    font-family: 'Quattrocento', serif;
+    color:rgb(11, 10, 10); 
+    font-size: 25px;
+    position: relative;
+    height: 30px;
+    overflow: hidden;
+}
+.text-rotator span {
+  position: absolute;
+  opacity: 0;
+  animation: fadeText 8s infinite;
+}
+
+.text-rotator span:nth-child(1) { animation-delay: 0s; }
+.text-rotator span:nth-child(2) { animation-delay: 2s; }
+.text-rotator span:nth-child(3) { animation-delay: 4s; }
+.text-rotator span:nth-child(4) { animation-delay: 6s; }
+
+@keyframes fadeText {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  25% { opacity: 1; }
+  35% { opacity: 0; }
+  100% { opacity: 0; }
+}
+span i{
+    color:rgb(245, 5, 5);
+}
     .profile{
         display: grid;
-        gap:10px;
-        border: 2px solid seagreen;
+        grid-template-columns: 1fr 500px;
+        gap: 10px;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    .proimg{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
     }
     .prof{
         border: 2px solid darkgoldenrod;
@@ -55,18 +178,17 @@
     .container{
     border: 2px solid red;
     display: grid;
-    gap:10px;
+    gap:13px;
     }
     .navbar{
-        border: 2px solid darkblue;
+        box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.3);
         display: flex;
         justify-content: space-around;
-        height: 50px;
+        height: 40px;
     }
     .nav1{
-        width: 50px;
-        height: 50px;
-        border: 2px solid rebeccapurple;
+        width: 40px;
+        height: 40px;
     }
     .logo{
         width: 100%;
@@ -76,21 +198,141 @@
     .nav2{
         width: 60%;
         height: 100%;
-        border: 2px solid darkgoldenrod;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
     .name{
-        background-color: black;
-        color:white;
-        padding: 6px;
+        background-color:white;
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        padding: 5px;
         border-radius: 10px;
     }
+    .namehead{
+        display: flex;
+        padding: 5px;
+    }
+    .greeting{
+        margin-top: 4px;
+        font-size: 1em;
+    }
+    svg {
+        font-family: "Red Hat Text", sans-serif;
+        width: 100%;
+        height: 100%;
+    }
+    svg text {
+        animation: stroke 3s infinite alternate;
+        stroke-width: 0.05;
+        stroke: #030508;
+        font-size: 5em;
+    }
+
+    @keyframes stroke {
+        0% {
+            fill: rgba(11,21,31,0);
+            stroke: rgba(3,5,8,1);
+            stroke-dashoffset: 25%;
+            stroke-dasharray: 0 50%;
+            stroke-width: 2;
+        }
+        70% {
+            fill: rgba(11,21,31,0);
+            stroke: rgba(3,5,8,1);
+        }
+        80% {
+            fill: rgba(11,21,31,0);
+            stroke: rgba(3,5,8,1);
+            stroke-width: 3;
+        }
+        100% {
+            fill: rgba(11,21,31,1);
+            stroke: rgba(3,5,8,0);
+            stroke-dashoffset: -25%;
+            stroke-dasharray: 50% 0;
+            stroke-width: 0;
+        }
+    }
+    .wrapper {
+        width: 30%;
+    }
+    .show{
+        padding:11px;
+        font-size: 1em;
+        font-family: 'PT Serif Caption', serif;
+    }
+    .custom-loader {
+    width: 17px;
+    height: 17px;
+    display: inline-grid;
+    color: #766DF4;
+
+    background: 
+        linear-gradient(currentColor 0 0) center/100% 1.5px,
+        linear-gradient(currentColor 0 0) center/1.5px 100%;
+    background-repeat: no-repeat;
+    animation: s8 2s infinite;
+    }
+
+    .custom-loader::before,
+    .custom-loader::after {
+    content: "";
+    grid-area: 1/1;
+    background: repeating-conic-gradient(#0000 0 35deg,currentColor 0 90deg);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 1.5px),#000 0);
+    border-radius: 50%;
+    }
+    .custom-loader::after {
+    margin:20%;
+    }
+
+    @keyframes s8 {
+    100% {transform: rotate(1turn)}
+    }
+
+    @keyframes s5 {
+    100% {transform: rotate(1turn)}
+    }
+    .text-rotator {
+    font-family: 'Quattrocento', serif;
+    color:rgb(11, 10, 10); 
+    font-size: 1rem;
+    position: relative;
+    height: 30px;
+    overflow: hidden;
+}
+.text-rotator span {
+  position: absolute;
+  opacity: 0;
+  animation: fadeText 8s infinite;
+}
+
+.text-rotator span:nth-child(1) { animation-delay: 0s; }
+.text-rotator span:nth-child(2) { animation-delay: 2s; }
+.text-rotator span:nth-child(3) { animation-delay: 4s; }
+.text-rotator span:nth-child(4) { animation-delay: 6s; }
+
+@keyframes fadeText {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  25% { opacity: 1; }
+  35% { opacity: 0; }
+  100% { opacity: 0; }
+}
+span i{
+    color:rgb(245, 5, 5);
+}
     .profile{
         display: grid;
         gap:10px;
-        border: 2px solid seagreen;
+        box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.3);
+    }
+    .proimg{
+        margin-top: 2%;
+        margin-left: 15%;
+        width: 70%;
+        height: 96%;
+        border-radius: 50%;
     }
     .prof{
         border: 2px solid darkgoldenrod;
@@ -102,10 +344,10 @@
     .container{
     border: 2px solid red;
     display: grid;
-    gap:10px;
+    gap:20px;
     }
     .navbar{
-        border: 2px solid darkblue;
+        box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.3);
         display: flex;
         justify-content: space-around;
         height: 50px;
@@ -131,13 +373,134 @@
     .name{
         background-color:white;
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-        padding: 6px;
+        padding: 5px;
         border-radius: 10px;
     }
+    .namehead{
+        display: flex;
+        padding: 5px;
+    }
+    .greeting{
+        margin-top: 4px;
+        font-size: 1.5em;
+    }
+    svg {
+        font-family: "Red Hat Text", sans-serif;
+        width: 100%;
+        height: 100%;
+    }
+    svg text {
+        animation: stroke 3s infinite alternate;
+        stroke-width: 0.05;
+        stroke: #030508;
+        font-size: 5em;
+    }
+
+    @keyframes stroke {
+        0% {
+            fill: rgba(11,21,31,0);
+            stroke: rgba(3,5,8,1);
+            stroke-dashoffset: 25%;
+            stroke-dasharray: 0 50%;
+            stroke-width: 2;
+        }
+        70% {
+            fill: rgba(11,21,31,0);
+            stroke: rgba(3,5,8,1);
+        }
+        80% {
+            fill: rgba(11,21,31,0);
+            stroke: rgba(3,5,8,1);
+            stroke-width: 3;
+        }
+        100% {
+            fill: rgba(11,21,31,1);
+            stroke: rgba(3,5,8,0);
+            stroke-dashoffset: -25%;
+            stroke-dasharray: 50% 0;
+            stroke-width: 0;
+        }
+    }
+    .wrapper {
+        width: 40%;
+    }
+    .show{
+        padding:5px;
+        font-size: 2rem;
+        font-family: 'PT Serif Caption', serif;
+    }
+    .custom-loader {
+    width: 22px;
+    height: 22px;
+    display: inline-grid;
+    color: #766DF4;
+
+    background: 
+        linear-gradient(currentColor 0 0) center/100% 1.5px,
+        linear-gradient(currentColor 0 0) center/1.5px 100%;
+    background-repeat: no-repeat;
+    animation: s8 2s infinite;
+    }
+
+    .custom-loader::before,
+    .custom-loader::after {
+    content: "";
+    grid-area: 1/1;
+    background: repeating-conic-gradient(#0000 0 35deg,currentColor 0 90deg);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 1.5px),#000 0);
+    border-radius: 50%;
+    }
+    .custom-loader::after {
+    margin:20%;
+    }
+
+    @keyframes s8 {
+    100% {transform: rotate(1turn)}
+    }
+
+    @keyframes s5 {
+    100% {transform: rotate(1turn)}
+    }
+    .text-rotator {
+    font-family: 'Quattrocento', serif;
+    color:rgb(11, 10, 10); 
+    font-size: 1.5rem;
+    position: relative;
+    height: 30px;
+    overflow: hidden;
+}
+.text-rotator span {
+  position: absolute;
+  opacity: 0;
+  animation: fadeText 8s infinite;
+}
+
+.text-rotator span:nth-child(1) { animation-delay: 0s; }
+.text-rotator span:nth-child(2) { animation-delay: 2s; }
+.text-rotator span:nth-child(3) { animation-delay: 4s; }
+.text-rotator span:nth-child(4) { animation-delay: 6s; }
+
+@keyframes fadeText {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  25% { opacity: 1; }
+  35% { opacity: 0; }
+  100% { opacity: 0; }
+}
+span i{
+    color:rgb(245, 5, 5);
+}
     .profile{
         display: grid;
         gap:10px;
-        border: 2px solid seagreen;
+        box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.3);
+    }
+    .proimg{
+        margin-top:2% ;
+        margin-left:20% ;
+        width: 55%;
+        height: 95%;
+        border-radius: 50%;
     }
     .prof{
         border: 2px solid darkgoldenrod;
