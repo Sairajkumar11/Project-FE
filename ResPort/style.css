@@ -2,9 +2,30 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif+Caption&display=swap');
 
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.name:hover{
+    color:white;
+    background-color: black;
+}
+.name-3 a{
+    font-size: 1.1em;
+    background-color: black;
+    color: pink;
+    padding:7px;
+    border-radius:10px ;
+}
+.name-3 a:hover{
+    background-color: white;
+    color: rgb(236, 21, 57);
+   
+}
+
 @media (min-width: 1025px) {
     .container{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: grid;
     gap:30px;
     }
@@ -40,10 +61,33 @@
     .namehead{
         display: flex;
         padding: 5px;
+        padding-left: 30px;
+        border-radius: 5px 40px 5px 40px;
+        background:
+		  radial-gradient(100px at calc(100% + calc(100px*.866)) 50%,#D9DADA 99%, #0000 101%) 0 calc(-5*100px/2),
+		  radial-gradient(100px at calc(100% + calc(100px*.866)) 50%,#D9DADA 99%, #0000 101%) calc(-2*calc(100px*.866)) calc(100px/2),
+		  radial-gradient(100px at 100% 50%,#E4E4ED 99%, #0000 101%) 0 calc(-2*100px),
+		  radial-gradient(100px,#D9DADA 99%, #0000 101%) calc(100px*.866) calc(-5*100px/2),
+		  radial-gradient(100px,#E4E4ED 99%, #0000 101%) calc(100px*.866) calc( 5*100px/2),
+		  radial-gradient(100px at 100% 100%,#D9DADA 99%, #0000 101%) 0 calc(-1*100px),   
+		  radial-gradient(100px at 0%   50% ,#D9DADA 99%, #0000 101%) 0 calc(-4*100px),
+		  radial-gradient(100px,#E4E4ED 99%, #0000 101%) calc(-1*calc(100px*.866)) calc(-7*100px/2),
+		  radial-gradient(100px,#D9DADA 99%, #0000 101%) calc(-1*calc(100px*.866)) calc(-5*100px/2),
+		  radial-gradient(100px at 100% 50%,#E4E4ED 99%, #0000 101%) calc(-2*calc(100px*.866)) 100px,
+		  radial-gradient(100px,#D9DADA 99%, #0000 101%) calc(-1*calc(100px*.866)) calc(100px/ 2),
+		  radial-gradient(100px,#E4E4ED 99%, #0000 101%) calc(-1*calc(100px*.866)) calc(100px/-2),
+		  radial-gradient(100px,#D9DADA 99%, #0000 101%) 0 calc(-1*100px),
+		  radial-gradient(100px,#E4E4ED 99%, #0000 101%) calc(100px*.866) calc(100px/-2),
+		  radial-gradient(100px,#D9DADA 99%, #0000 101%) calc(100px*.866) calc(100px/ 2) 
+		  #E4E4ED;
+	background-size: calc(4*calc(100px*.866)) calc(6*100px);
     }
     .greeting{
         font-size: 1.8em;
         margin-top:0.7% ;
+    }
+    .greeting::after{
+        content: '\00a0';
     }
     svg {
         font-family: "Red Hat Text", sans-serif;
@@ -89,6 +133,14 @@
         padding:20px;
         font-size: 2.5rem;
         font-family: 'PT Serif Caption', serif;
+        border-radius: 50px 10px 50px 10px;
+        background:
+		  radial-gradient(100% 100% at 100% 100%, #0000 46%,#F5F5F5 47% 53%,#0000 54%) 100px 100px,
+		  radial-gradient(100% 100% at 0 0, #0000 46%,#F5F5F5 47% 53%,#0000 54%) 100px 100px,
+		  radial-gradient(100% 100%, #0000 22%, #F5F5F5 23% 29%, #0000 30% 34%, #F5F5F5 35% 41%, #0000 42%)
+		  #FAFAFA;
+	    background-size: 200px 200px;
+
     }
     .custom-loader {
     width: 30px;
@@ -129,6 +181,18 @@
     position: relative;
     height: 30px;
     overflow: hidden;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:5px 40px 5px 40px ;
+    background: 
+		  radial-gradient(farthest-side at -33.33% 50%,#0000 52%,#F2F5F0 54% 57%,#0000 59%) 0 calc(400px/2),
+		  radial-gradient(farthest-side at 50% 133.33%,#0000 52%,#F2F5F0 54% 57%,#0000 59%) calc(400px/2) 0,
+		  radial-gradient(farthest-side at 133.33% 50%,#0000 52%,#F2F5F0 54% 57%,#0000 59%),
+		  radial-gradient(farthest-side at 50% -33.33%,#0000 52%,#F2F5F0 54% 57%,#0000 59%),
+		  #EDEDED;
+	background-size: calc(400px/4.667) 400px,400px calc(400px/4.667);
 }
 .text-rotator span {
   position: absolute;
@@ -154,7 +218,8 @@ span i{
     .profile{
         display: grid;
         grid-template-columns: 1fr 500px;
-        gap: 10px;
+        gap: 9px;
+        padding: 5px;
         box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
     }
     .proimg{
@@ -163,7 +228,7 @@ span i{
         border-radius: 50%;
     }
     .prof{
-        border: 2px solid darkgoldenrod;
+        border: 2px solid rgb(228, 227, 225);
     }
     .pic{
         grid-column: 2/3;
@@ -171,15 +236,23 @@ span i{
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius:40px;
     }
 } 
 
 /* Mobile */
 @media screen and (max-width: 480px) {
     .container{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: grid;
     gap:13px;
+    }
+    .name-3 a{
+    font-size: 1em;
+    background-color: black;
+    color: pink;
+    padding:7px;
+    border-radius:10px ;
     }
     .navbar{
         box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.3);
@@ -212,6 +285,25 @@ span i{
     .namehead{
         display: flex;
         padding: 5px;
+        border-radius: 5px 20px 5px 20px;
+        background:
+		  radial-gradient(100px at calc(100% + calc(100px*.866)) 50%,#D9DADA 99%, #0000 101%) 0 calc(-5*100px/2),
+		  radial-gradient(100px at calc(100% + calc(100px*.866)) 50%,#D9DADA 99%, #0000 101%) calc(-2*calc(100px*.866)) calc(100px/2),
+		  radial-gradient(100px at 100% 50%,#E4E4ED 99%, #0000 101%) 0 calc(-2*100px),
+		  radial-gradient(100px,#D9DADA 99%, #0000 101%) calc(100px*.866) calc(-5*100px/2),
+		  radial-gradient(100px,#E4E4ED 99%, #0000 101%) calc(100px*.866) calc( 5*100px/2),
+		  radial-gradient(100px at 100% 100%,#D9DADA 99%, #0000 101%) 0 calc(-1*100px),   
+		  radial-gradient(100px at 0%   50% ,#D9DADA 99%, #0000 101%) 0 calc(-4*100px),
+		  radial-gradient(100px,#E4E4ED 99%, #0000 101%) calc(-1*calc(100px*.866)) calc(-7*100px/2),
+		  radial-gradient(100px,#D9DADA 99%, #0000 101%) calc(-1*calc(100px*.866)) calc(-5*100px/2),
+		  radial-gradient(100px at 100% 50%,#E4E4ED 99%, #0000 101%) calc(-2*calc(100px*.866)) 100px,
+		  radial-gradient(100px,#D9DADA 99%, #0000 101%) calc(-1*calc(100px*.866)) calc(100px/ 2),
+		  radial-gradient(100px,#E4E4ED 99%, #0000 101%) calc(-1*calc(100px*.866)) calc(100px/-2),
+		  radial-gradient(100px,#D9DADA 99%, #0000 101%) 0 calc(-1*100px),
+		  radial-gradient(100px,#E4E4ED 99%, #0000 101%) calc(100px*.866) calc(100px/-2),
+		  radial-gradient(100px,#D9DADA 99%, #0000 101%) calc(100px*.866) calc(100px/ 2) 
+		  #E4E4ED;
+	background-size: calc(4*calc(100px*.866)) calc(6*100px);
     }
     .greeting{
         margin-top: 4px;
@@ -263,6 +355,13 @@ span i{
         padding:11px;
         font-size: 1em;
         font-family: 'PT Serif Caption', serif;
+        border-radius: 30px 10px 30px 10px;
+        background:
+		  radial-gradient(100% 100% at 100% 100%, #0000 46%,#F5F5F5 47% 53%,#0000 54%) 100px 100px,
+		  radial-gradient(100% 100% at 0 0, #0000 46%,#F5F5F5 47% 53%,#0000 54%) 100px 100px,
+		  radial-gradient(100% 100%, #0000 22%, #F5F5F5 23% 29%, #0000 30% 34%, #F5F5F5 35% 41%, #0000 42%)
+		  #FAFAFA;
+	    background-size: 200px 200px;
     }
     .custom-loader {
     width: 17px;
@@ -306,6 +405,14 @@ span i{
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius:5px 20px 5px 20px ;
+    background: 
+		  radial-gradient(farthest-side at -33.33% 50%,#0000 52%,#F2F5F0 54% 57%,#0000 59%) 0 calc(400px/2),
+		  radial-gradient(farthest-side at 50% 133.33%,#0000 52%,#F2F5F0 54% 57%,#0000 59%) calc(400px/2) 0,
+		  radial-gradient(farthest-side at 133.33% 50%,#0000 52%,#F2F5F0 54% 57%,#0000 59%),
+		  radial-gradient(farthest-side at 50% -33.33%,#0000 52%,#F2F5F0 54% 57%,#0000 59%),
+		  #EDEDED;
+	background-size: calc(400px/4.667) 400px,400px calc(400px/4.667);
 }
 .text-rotator span {
   position: absolute;
@@ -330,7 +437,7 @@ span i{
 }
     .profile{
         display: grid;
-        gap:10px;
+        gap:5px;
         box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.3);
     }
     .proimg{
@@ -341,14 +448,17 @@ span i{
         border-radius: 50%;
     }
     .prof{
-        border: 2px solid darkgoldenrod;
+        border: 2px solid rgb(228, 227, 225);
+    }
+    .pic{
+        border-radius: 40px;
     }
 } 
 
 /* Tablet */
 @media (min-width: 481px) and (max-width: 1024px) {
     .container{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: grid;
     gap:20px;
     }
@@ -385,6 +495,25 @@ span i{
     .namehead{
         display: flex;
         padding: 5px;
+        border-radius: 5px 20px 5px 20px;
+        background:
+		  radial-gradient(100px at calc(100% + calc(100px*.866)) 50%,#D9DADA 99%, #0000 101%) 0 calc(-5*100px/2),
+		  radial-gradient(100px at calc(100% + calc(100px*.866)) 50%,#D9DADA 99%, #0000 101%) calc(-2*calc(100px*.866)) calc(100px/2),
+		  radial-gradient(100px at 100% 50%,#E4E4ED 99%, #0000 101%) 0 calc(-2*100px),
+		  radial-gradient(100px,#D9DADA 99%, #0000 101%) calc(100px*.866) calc(-5*100px/2),
+		  radial-gradient(100px,#E4E4ED 99%, #0000 101%) calc(100px*.866) calc( 5*100px/2),
+		  radial-gradient(100px at 100% 100%,#D9DADA 99%, #0000 101%) 0 calc(-1*100px),   
+		  radial-gradient(100px at 0%   50% ,#D9DADA 99%, #0000 101%) 0 calc(-4*100px),
+		  radial-gradient(100px,#E4E4ED 99%, #0000 101%) calc(-1*calc(100px*.866)) calc(-7*100px/2),
+		  radial-gradient(100px,#D9DADA 99%, #0000 101%) calc(-1*calc(100px*.866)) calc(-5*100px/2),
+		  radial-gradient(100px at 100% 50%,#E4E4ED 99%, #0000 101%) calc(-2*calc(100px*.866)) 100px,
+		  radial-gradient(100px,#D9DADA 99%, #0000 101%) calc(-1*calc(100px*.866)) calc(100px/ 2),
+		  radial-gradient(100px,#E4E4ED 99%, #0000 101%) calc(-1*calc(100px*.866)) calc(100px/-2),
+		  radial-gradient(100px,#D9DADA 99%, #0000 101%) 0 calc(-1*100px),
+		  radial-gradient(100px,#E4E4ED 99%, #0000 101%) calc(100px*.866) calc(100px/-2),
+		  radial-gradient(100px,#D9DADA 99%, #0000 101%) calc(100px*.866) calc(100px/ 2) 
+		  #E4E4ED;
+	background-size: calc(4*calc(100px*.866)) calc(6*100px);
     }
     .greeting{
         margin-top: 4px;
@@ -434,6 +563,13 @@ span i{
         padding:5px;
         font-size: 2rem;
         font-family: 'PT Serif Caption', serif;
+        border-radius: 40px 10px 40px 10px;
+        background:
+		  radial-gradient(100% 100% at 100% 100%, #0000 46%,#F5F5F5 47% 53%,#0000 54%) 100px 100px,
+		  radial-gradient(100% 100% at 0 0, #0000 46%,#F5F5F5 47% 53%,#0000 54%) 100px 100px,
+		  radial-gradient(100% 100%, #0000 22%, #F5F5F5 23% 29%, #0000 30% 34%, #F5F5F5 35% 41%, #0000 42%)
+		  #FAFAFA;
+	    background-size: 200px 200px;
     }
     .custom-loader {
     width: 22px;
@@ -474,6 +610,17 @@ span i{
     position: relative;
     height: 30px;
     overflow: hidden;
+    border-radius:5px 20px 5px 20px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: 
+		  radial-gradient(farthest-side at -33.33% 50%,#0000 52%,#F2F5F0 54% 57%,#0000 59%) 0 calc(400px/2),
+		  radial-gradient(farthest-side at 50% 133.33%,#0000 52%,#F2F5F0 54% 57%,#0000 59%) calc(400px/2) 0,
+		  radial-gradient(farthest-side at 133.33% 50%,#0000 52%,#F2F5F0 54% 57%,#0000 59%),
+		  radial-gradient(farthest-side at 50% -33.33%,#0000 52%,#F2F5F0 54% 57%,#0000 59%),
+		  #EDEDED;
+	background-size: calc(400px/4.667) 400px,400px calc(400px/4.667);
 }
 .text-rotator span {
   position: absolute;
@@ -498,7 +645,7 @@ span i{
 }
     .profile{
         display: grid;
-        gap:10px;
+        gap:7px;
         box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.3);
     }
     .proimg{
@@ -509,6 +656,9 @@ span i{
         border-radius: 50%;
     }
     .prof{
-        border: 2px solid darkgoldenrod;
+        border: 2px solid rgb(228, 227, 225);
+    }
+    .pic{
+        border-radius: 50px;
     }
 } 
