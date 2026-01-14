@@ -1,13 +1,24 @@
 /* Place in your CSS file at the top of the document */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif+Caption&display=swap');
+/* Place in your CSS file at the top of the document */
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+.greeting{
+    font-family: 'Raleway', sans-serif;
+    font-size: 50em;
+}
 a{
     text-decoration: none;
     color:inherit;
+    font-family: 'Raleway', sans-serif;
 }
-.name:hover{
+.name-1:hover{
     color:white;
+    background-color: black;
+}
+.name-2:hover{
+    color: white;
     background-color: black;
 }
 .name-3 a{
