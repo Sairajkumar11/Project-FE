@@ -299,14 +299,13 @@ span i{
     .text-rotator {
     font-family: 'Quattrocento', serif;
     color:rgb(11, 10, 10); 
-    font-size: 1rem;
+    font-size: 0.8rem;
     position: relative;
     height: 30px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
 }
 .text-rotator span {
   position: absolute;
