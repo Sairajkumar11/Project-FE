@@ -306,6 +306,7 @@ span i{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 5px;
 }
 .text-rotator span {
   position: absolute;
