@@ -216,6 +216,8 @@ span i{
     .greeting{
         margin-top: 4px;
         font-size: 1em;
+        display: flex;
+        width: 18%;
     }
     svg {
         font-family: "Red Hat Text", sans-serif;
@@ -301,6 +303,9 @@ span i{
     position: relative;
     height: 30px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .text-rotator span {
   position: absolute;
